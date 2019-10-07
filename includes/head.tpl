@@ -1,5 +1,5 @@
 <!-- Styling -->
-<link href="{$WEB_ROOT}/templates/{$template}/assets/css/bootstrap-4.3.1.min.css?v={$versionHash}" rel="stylesheet">
+<link href="{$WEB_ROOT}/templates/{$template}/assets/css/bootstrap.css?v={$versionHash}" rel="stylesheet">
 
 <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600|Raleway:400,700" rel="stylesheet">
 <link href="{$WEB_ROOT}/templates/{$template}/assets/css/typography.css?v={$versionHash}" rel="stylesheet">
@@ -31,5 +31,5 @@
     <meta name="robots" content="noindex"/>
 {/if}
 
-{assign var="mw_site" value="http://templates.microweber.com/microweber" scope="global"}
+{assign var="mw_site" value="http://templates.microweber.com/whitelabel" scope="global"}
 <script>var mw_site = "{$mw_site}";</script>

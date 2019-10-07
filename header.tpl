@@ -15,7 +15,7 @@
 <div class="main">
     {$headeroutput}
 
-    <div class="navigation-holder">
+    <div class="navigation-holder not-whmcs-content">
         <nav class="navigation">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->

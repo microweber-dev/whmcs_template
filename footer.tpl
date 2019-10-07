@@ -47,7 +47,7 @@
         {$footeroutput}
     </div>
 
-    <footer class="p-t-100 p-b-60">
+    <footer class="p-t-100 p-b-60 not-whmcs-content">
         <div class="container">
 
             <div class="row">
