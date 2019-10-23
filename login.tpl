@@ -1,3 +1,9 @@
+ {if !$loggedin && $custom_oauth2_login_url}
+    <script>
+           window.location.href = "{$custom_oauth2_login_url}";
+    </script>
+{/if}
+
 <section class="section p-t-200 p-b-200" style="background: #f6fafb;">
     <div class="container">
         <div class="row">
@@ -27,7 +33,8 @@
                     {/if}
 
                     <div class="providerLinkingFeedback"></div>
-
+                    
+                    
                     <div class="row">
                         <div class="col-sm-12">
                             <form method="post" action="{$systemurl}dologin.php" class="login-form" role="form">
@@ -56,11 +63,13 @@
                                     </div>
                                 </div>
 
-                                {if $captcha->isEnabled()}
-                                    <div class="text-center margin-bottom">
-                                        {include file="$template/includes/captcha.tpl"}
-                                    </div>
-                                {/if}
+                                {if is_object($captcha) && method_exists($captcha, 'isEnabled')}
+	                                {if $captcha->isEnabled()}
+	                                    <div class="text-center margin-bottom">
+	                                        {include file="$template/includes/captcha.tpl"}
+	                                    </div>
+	                                {/if}
+								{/if}
 
                                 <div class="text-center">
                                     <button id="login" type="submit" class="btn btn-default btn-md">{$LANG.loginbutton}</button>
